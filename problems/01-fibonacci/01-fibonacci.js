@@ -5,7 +5,7 @@ function fib(n) {
     let prevNums = [0,1];
     let count = 2;
     
-    if((n === 0) || (n ===1)){
+    if((n === 0) || (n === 1)){
         return prevNums[n];
     }else{
         for(let i = 2; i <= n; i++){
