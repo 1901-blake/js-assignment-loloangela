@@ -6,14 +6,14 @@ function bubbleSort(numArray) {
     let finished;
     do {
         finished = true;
-        for (let i = 0; i < numArray.length - 1; i++) {
-            if(numArray[i] > numArray[i + 1]){
-                let temp = numArray[i + 1];
-                numArray[i + 1] = numArray[i];
-                numArray[i] = temp;
-                finished = false;
-            }   
-        }
+        numArray.forEach((element, i, numArray) => {
+                if(element > numArray[i + 1]){
+                    let temp = numArray[i + 1];
+                    numArray[i + 1] = element;
+                    numArray[i] = temp;
+                    finished = false;
+                }
+        });
     } while (!finished);  
     return numArray; 
 }
