@@ -32,7 +32,7 @@ function printShape(shape, height, character) {
       }
       break;
     case 'triangle':
-      for (let i = 1; i <= height; i++) {
+      for (let i = 1; i <= height; i++) { vhv
         let row = '';
         for (let j = 0; j < i; j++) {
           row += character;
