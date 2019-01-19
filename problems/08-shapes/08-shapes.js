@@ -20,9 +20,18 @@ Example for printShape("Diamond", 5, "*");
  ***
   * 
 */
+/**
+ * printShape takes three parameters and creates a triangle based on the params
+ * @param {*} shape 
+ * @param {*} height 
+ * @param {*} character 
+ * Author: Lori A. Oliver
+ */
 function printShape(shape, height, character) {
+  console.log(`Example for printShape("${shape}", ${height}, "${character}");`);
   switch (shape.toLowerCase()) {
-    case 'square':
+    case 'square': 
+      // Add hieght number of rows with height number of character
       for (let i = 0; i < height; i++) {
         let row = '';
         for (let j = 0; j < height; j++) {
@@ -31,8 +40,11 @@ function printShape(shape, height, character) {
         console.log(row);
       }
       break;
+
     case 'triangle':
-      for (let i = 1; i <= height; i++) { vhv
+      // Increment number of characters starting at 1, ending
+      // at height.
+      for (let i = 1; i <= height; i++) {
         let row = '';
         for (let j = 0; j < i; j++) {
           row += character;
@@ -40,6 +52,7 @@ function printShape(shape, height, character) {
         console.log(row);
       }
       break;
+
     case 'diamond':
       // Create an array the size of height
       let space = ' ';
@@ -47,6 +60,7 @@ function printShape(shape, height, character) {
       // Populate array with character in appropriate postion
       let i = 0;
       for (i; i <= Math.floor(height/2); i++) {
+        // Top half of the diamond
         row = '';
         let numChar = i * 2 + 1;
         //DEBUG console.log(`NumChar: ${numChar}`);
@@ -61,6 +75,7 @@ function printShape(shape, height, character) {
       }
       //DEBUG console.log(`Index: ${i}`);
       for (--i; i > 0; i--) {
+        // Bottom half of the diamond
         row = '';
         //DEBUG console.log(`Index inside loop: ${i}`);
         startPos += 1;
@@ -71,8 +86,6 @@ function printShape(shape, height, character) {
         row += space.repeat(numSpaces);
         console.log(row);
       }
-      
-
       break;
   }
 }

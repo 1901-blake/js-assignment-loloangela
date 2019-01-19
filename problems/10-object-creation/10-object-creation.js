@@ -2,6 +2,9 @@
 Create an object using an object literal, constructor function, and es6 class.
 The object should have the fields name and age.*/
 
+/**
+ * Author: Lori A. Oliver
+ */
 // Object Literals of each Person
 let person = {
     name: 'Lori',
@@ -18,7 +21,7 @@ let person2 = {
     age: 22
 }
 
-// Class (created through the use of the function keyword) accepts a person object and additional features 
+// Class (created through the use of the function keyword) accepts a person object and adds features 
 function addFieldsToPerson(newPerson, ht, hairColor){
     this.whoIAm = newPerson,
     this.height = ht,
@@ -26,11 +29,11 @@ function addFieldsToPerson(newPerson, ht, hairColor){
 
     this.discussMyself = () => {
         console.log(`\tMy Name is ${this.whoIAm['name']} and I am ${this.whoIAm['age']} years old.
-        I'm ${this.height}ft tall. My hair color is ${this.hairColor}.\n`);
+        I'm ${this.height} feet tall. My hair color is ${this.hairColor}.\n`);
     }
 }
 
-// The class People wraps several person's and and calls their discussMyself method
+// The class People wraps several person objects together and calls their discussMyself methods
 class People {
     constructor(onePerson, anotherPerson, extraPerson) {
         this.onePerson = onePerson,
@@ -49,6 +52,7 @@ class People {
     }
 }
 
+// Create people, put them in a group and introduce each one. 
 //DEBUG console.log(person);
 let group = new People(person, person1, person2);
 group.introduce();

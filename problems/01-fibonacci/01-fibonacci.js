@@ -1,20 +1,28 @@
 /* 1. Fibonacci
 Define function: fib(n) 
 Return the nth number in the fibonacci sequence. */
+
+/**
+ * fib takes a number and finds the nth number in the fibonacci sequence
+ * @param {*} n 
+ * Author: Lori A. Oliver
+ */
 function fib(n) {
     let prevNums = [0,1];
     let count = 2;
     
-    if((n === 0) || (n === 1)){
-        return prevNums[n];
-    }else{
-        for(let i = 2; i <= n; i++){
-            let temp = prevNums[0] + prevNums[1];
-            prevNums[0] = prevNums[1];
-            prevNums[1] = temp; 
-        }
-        return prevNums[1];
+    return ((n === 0) || (n === 1))
+        ? prevNums[n]
+        : addNSwap(n, prevNums)
+}
+
+function addNSwap(count, array){
+    for(let i = 2; i <= count; i++){
+        let temp = array[0] + array[1];
+        array[0] = array[1];
+        array[1] = temp;
     }
+    return array[1]
 }
 
 console.log(`First num: ${fib(1)}`);

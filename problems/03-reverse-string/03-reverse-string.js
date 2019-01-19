@@ -1,6 +1,12 @@
 /* 3. Reverse String
 Define function: reverseStr(someStr)
 Reverse and return the String. */
+
+/**
+ * reverseStr takes a string and puts in the reverse order
+ * @param {*} someStr 
+ * Author: Lori A. Oliver
+ */
 function reverseStr(someStr) {
   let str = '';
   let arrStr = someStr.split('');
@@ -12,4 +18,4 @@ function reverseStr(someStr) {
 }
 
 console.log(reverseStr("Stranger Things is a movie about strange occurrances!"));
-console.log(reverseStr("What is do?"));
+console.log(reverseStr("What it do?"));
