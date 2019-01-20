@@ -22,7 +22,8 @@ function bubbleSort(numArray) {
     } while (!finished);  
     return numArray; 
 }
-
-console.log(bubbleSort([100, 55, 1, 2, 4]));
-console.log(bubbleSort([99, 155, 212, 32, 14]));
-console.log(bubbleSort([56, 255, 1, 22, 43]));
+let x = [100, 55, 1, 2, 4], y = [99, 155, 212, 32, 14];
+let z = [56, 255, 1, 22, 43];
+console.log(`Original function: ${x} \nSorted function: ${bubbleSort(x)}`);
+console.log(`Original function: ${y} \nSorted function: ${bubbleSort(y)}`);
+console.log(`Original function: ${z} \nSorted function: ${bubbleSort(z)}`);

@@ -11,7 +11,9 @@ function fib(n) {
     let prevNums = [0,1];
     let count = 2;
     
-    return ((n === 0) || (n === 1))
+    return (typeof n !== typeof NaN)
+        ? '**Invalid Input! Please enter a number.**'
+        : ((n === 0) || (n === 1))
         ? prevNums[n]
         : addNSwap(n, prevNums)
 }
@@ -24,7 +26,7 @@ function addNSwap(count, array){
     }
     return array[1]
 }
-
+console.log(`Not a num: ${fib("Hi")}`);
 console.log(`First num: ${fib(1)}`);
 console.log(`Second num: ${fib(2)}`);
 console.log(`Third num: ${fib(3)}`);
